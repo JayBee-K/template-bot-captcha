@@ -1,131 +1,372 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-	<title>Bot Captcha</title>
-	<meta name="description" content="Swap coin V2">
-	<meta name="author" content="">
+    <title>Bot Captcha</title>
+    <meta name="description" content="Swap coin V2">
+    <meta name="author" content="">
 
-	<meta property="og:title" content="Swap coin V2">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="">
-	<meta property="og:description" content="Swap coin V2">
-	<meta property="og:image" content="">
+    <meta property="og:title" content="Swap coin V2">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Swap coin V2">
+    <meta property="og:image" content="">
 
-	<link rel="icon" href="/assets/images/favicon.png">
-	<link rel="apple-touch-icon" href="/assets/images/favicon.png">
+    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png">
 
-	<style>
+    <style>
         :root {
             --primary-color: #bbbbbb;
             --secondary-color: #3080e3;
             --dark-color: #232323;
-			--gray-color: #545252;
+            --gray-color: #545252;
             --transition: .3s all ease-in-out;
         }
-	</style>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-		  rel="stylesheet">
-
-	<link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" href="./assets/plugins/select2/css/select2.min.css">
-	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
-	<link rel="stylesheet" href="./assets/css/style.css">
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 <header class="header" id="header">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="header-inner">
-					<div class="header-inner_left">
-						<div class="header-logo">
-							<a href="/">
-								<img src="./assets/images/logo.png" alt="">
-							</a>
-						</div>
-					</div>
-					<div class="header-inner_middle">
-						<div class="header-navigation">
-							<ul class="list-unstyled mb-0">
-								<li>
-									<a href="">
-										Captcha recognition service
-									</a>
-								</li>
-								<li>
-									<a href="">
-										Work for us
-									</a>
-								</li>
-								<li>
-									<a href="">
-										API
-									</a>
-									<ul class="list-unstyled mb-0">
-										<li>
-											<a href="">
-												Hướng dẫn sử dụng API
-											</a>
-										</li>
-										<li>
-											<a href="">
-												Hướng dẫn sử dụng
-											</a>
-										</li>
-										<li>
-											<a href="">
-												Hướng dẫn sử dụng
-											</a>
-										</li>
-										<li>
-											<a href="">
-												Hướng dẫn sử dụng
-											</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="">
-										Software
-									</a>
-								</li>
-								<li>
-									<a href="">
-										Blog
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="header-inner_right">
-						<div class="header-login">
-							<div class="header-login_item header-login_item__text">
-								<a href="dang-nhap.html">Đăng nhập</a>
-							</div>
-							<div class="header-login_item header-login_item__btn">
-								<a href="dang-ky.html">Đăng ký</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="header-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="header-inner">
+                    <div class="header-inner_left">
+                        <div class="header-logo">
+                            <a href="/">
+                                <img src="./assets/images/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-inner_middle">
+                        <div class="header-navigation">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="">
+                                        Captcha recognition service
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Work for us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        API
+                                    </a>
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <a href="">
+                                                Hướng dẫn sử dụng API
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Hướng dẫn sử dụng
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Hướng dẫn sử dụng
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Hướng dẫn sử dụng
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Software
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Blog
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-inner_right">
+                        <div class="header-login">
+                            <div class="header-login_item header-login_item__text">
+                                <a href="dang-nhap.html">Đăng nhập</a>
+                            </div>
+                            <div class="header-login_item header-login_item__btn">
+                                <a href="dang-ky.html">Đăng ký</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-overlay"></div>
 </header>
 
 <div class="main">
-	<div class="section-form">
-		<div class="form-circle"></div>
-	</div>
+    <div class="section-captcha">
+        <div class="captcha-decor_circle"></div>
+        <div class="captcha-main">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="captcha-inner">
+                            <div class="captcha-title">
+                                <i class="fas fa-grip-horizontal"></i> Order Captcha
+                            </div>
+                            <div class="captcha-content">
+                                <div class="captcha-content_image">
+                                    <img src="./assets/images/captcha/1.svg" alt="">
+                                </div>
+                                <div class="captcha-content_list">
+                                    <div class="captcha-list_item">
+                                        <img src="./assets/images/captcha/2.svg" alt="">
+                                        <div class="captcha-list_text">
+                                            Starting from $0.50 for 1000 solved CAPTCHAs
+                                        </div>
+                                    </div>
+                                    <div class="captcha-list_item">
+                                        <img src="./assets/images/captcha/3.svg" alt="">
+                                        <div class="captcha-list_text">
+                                            API available for most popular programming languages
+                                        </div>
+                                    </div>
+                                    <div class="captcha-list_item">
+                                        <img src="./assets/images/captcha/4.svg" alt="">
+                                        <div class="captcha-list_text">
+                                            Avg. response time: less than 12 sec
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="captcha-content_buttons">
+                                    <a href="" class="captcha-btn_outline">
+                                        Learn more
+                                    </a>
+                                    <a href="" class="captcha-btn">
+                                        Quick Start
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="captcha-image">
+                            <img src="./assets/images/captcha/bg-captcha.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-table_price section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <div class="section-heading_title">
+                            <i class="fas fa-grip-horizontal"></i>Customers statistics
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-col-10 justify-content-center">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card card-table_price">
+                        <div class="card-header">
+                            <div class="card-header_content">
+                                <div class="card-title">
+                                    Rate
+                                </div>
+                                <div class="card-desc">
+                                    Per 1000 normal captchas
+                                </div>
+                            </div>
+                            <div class="card-price">
+                                $0.75<span>/month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, labore, quae? Ducimus
+                                error nesciunt possimus reiciendis rem, sed sequi voluptas!
+                            </div>
+                            <div class="card-list">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i> Lorem ipsum dolor.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i> Lorem ipsum dolor sit amet.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>Lorem ipsum dolor.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-button">
+                                <a href="">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card card-table_price">
+                        <div class="card-header">
+                            <div class="card-header_content">
+                                <div class="card-title">
+                                    Rate
+                                </div>
+                                <div class="card-desc">
+                                    Per 1000 normal captchas
+                                </div>
+                            </div>
+                            <div class="card-price">
+                                $0.75<span>/month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, labore, quae? Ducimus
+                                error nesciunt possimus reiciendis rem, sed sequi voluptas!
+                            </div>
+                            <div class="card-list">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i> Lorem ipsum dolor.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i> Lorem ipsum dolor sit amet.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>Lorem ipsum dolor.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-button">
+                                <a href="">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card card-table_price">
+                        <div class="card-header">
+                            <div class="card-header_content">
+                                <div class="card-title">
+                                    Rate
+                                </div>
+                                <div class="card-desc">
+                                    Per 1000 normal captchas
+                                </div>
+                            </div>
+                            <div class="card-price">
+                                $0.75<span>/month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, labore, quae? Ducimus
+                                error nesciunt possimus reiciendis rem, sed sequi voluptas!
+                            </div>
+                            <div class="card-list">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i> Lorem ipsum dolor.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i> Lorem ipsum dolor sit amet.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>Lorem ipsum dolor.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-button">
+                                <a href="">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card card-table_price">
+                        <div class="card-header">
+                            <div class="card-header_content">
+                                <div class="card-title">
+                                    Rate
+                                </div>
+                                <div class="card-desc">
+                                    Per 1000 normal captchas
+                                </div>
+                            </div>
+                            <div class="card-price">
+                                $0.75<span>/month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, labore, quae? Ducimus
+                                error nesciunt possimus reiciendis rem, sed sequi voluptas!
+                            </div>
+                            <div class="card-list">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i> Lorem ipsum dolor.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i> Lorem ipsum dolor sit amet.
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>Lorem ipsum dolor.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-button">
+                                <a href="">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <footer class="footer">
@@ -133,11 +374,11 @@
 
 <script type=" text/javascript" src="./assets/plugins/jquery.min.js"></script>
 <script type="text/javascript"
-		src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+        src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
 <script type="text/javascript"
-		src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+        src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript"
-		src="./assets/plugins/select2/js/select2.min.js"></script>
+        src="./assets/plugins/select2/js/select2.min.js"></script>
 <script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
 </html>
