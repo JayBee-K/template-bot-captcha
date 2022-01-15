@@ -84,7 +84,7 @@ button {
 body {
     background-color: var(--white);
     color: var(--dark-color);
-    font: 400 15px/1.3 'IBM Plex Sans', sans-serif;
+    font: 400 14px/1.3 'Roboto', sans-serif;
 }
 
 .header {
@@ -146,7 +146,7 @@ body {
 .header .header-inner .header-inner_middle > .header-navigation > ul > li > a {
     font-weight: 500;
     color: var(--dark-color);
-    font-size: 1.1em;
+    font-size: 1.2em;
     display: inline-flex;
     align-items: center;
     padding: 6px 0;
@@ -505,8 +505,8 @@ body {
 }
 
 .section-table_price .card-table_price .card-header .card-price span {
-    font-size: .7em;
-    color: #ececec;
+    font-size: .65em;
+    color: #dbd9d9;
     font-weight: 500;
 }
 
@@ -572,4 +572,110 @@ body {
 .section-table_price .card-table_price:hover {
     box-shadow: 0 2px 8px 2px rgb(0 0 0 / 25%);
     border-color: var(--secondary-color);
+}
+
+.section-document {
+    background-color: #f6f6f6;
+}
+
+.section-document .document-inner {
+    padding: 45px;
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: 0 1px 8px 2px rgb(0 0 0 / 15%);
+}
+
+.section-document .document-inner .document-tabs .document-tabs_list .nav-tabs {
+    margin-bottom: 0;
+    border-bottom: 0;
+    justify-content: center;
+}
+
+.section-document .document-inner .document-tabs .document-tabs_list .nav-tabs .nav-item {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.section-document .document-inner .document-tabs .document-tabs_list .nav-tabs .nav-item .nav-link {
+    border-radius: 4px;
+    background: #e9e6e6;
+    font-size: 1.1em;
+    color: var(--dark-color);
+}
+
+.section-document .document-inner .document-tabs .document-tabs_list .nav-tabs .nav-item .nav-link:hover,
+.section-document .document-inner .document-tabs .document-tabs_list .nav-tabs .nav-item .nav-link:active,
+.section-document .document-inner .document-tabs .document-tabs_list .nav-tabs .nav-item .nav-link.active {
+    color: var(--white);
+    background: var(--secondary-color);
+}
+
+.section-document .document-inner .document-tabs .document-tabs_content {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.section-document .document-inner .document-tabs .document-tabs_content .tab-pane.active.show {
+    position: relative;
+    -webkit-animation: effectTab .2s ease-in-out both;
+    animation: effectTab .2s ease-in-out both;
+}
+
+@keyframes effectTab {
+    0% {
+        opacity: 0;
+        top: 10px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.section-document .document-inner .document-tabs .document-tabs_content .document-tabs_content__item .tab-content_image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.section-document .document-inner .document-tabs .document-tabs_content .document-tabs_content__item .tab-content_desc {
+    font-size: 1.15em;
+    line-height: 1.7;
+    color: #454545;
+}
+
+.section-document .document-inner .document-tabs .document-tabs_content .document-tabs_content__item .tab-content_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.section-document .document-inner .document-tabs .document-tabs_content .document-tabs_content__item .tab-content_buttons a {
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    align-items: center;
+    display: flex;
+}
+
+.section-document .document-inner .document-tabs .document-tabs_content .document-tabs_content__item .tab-content_buttons a + a {
+    margin-left: 30px;
+}
+
+.section-document .document-inner .document-tabs .document-tabs_content .document-tabs_content__item .tab-content_buttons a svg {
+    fill: var(--secondary-color);
+    width: 20px;
+    height: 20px;
+    transition: var(--transition);
+    margin-right: 6px;
+}
+
+.section-document .document-inner .document-tabs .document-tabs_content .document-tabs_content__item .tab-content_buttons a:hover {
+    color: #1c4982;
+}
+
+.section-document .document-inner .document-tabs .document-tabs_content .document-tabs_content__item .tab-content_buttons a:hover svg {
+    fill: #1c4982;
 }
