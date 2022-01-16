@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>Bot Captcha</title>
+    <meta name="description" content="Swap coin V2">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Swap coin V2">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="Swap coin V2">
+    <meta property="og:image" content="">
+
+    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+
+    <style>
+        :root {
+            --primary-color: #bbbbbb;
+            --secondary-color: #3080e3;
+            --dark-color: #232323;
+            --gray-color: #545252;
+            --transition: .3s all ease-in-out;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+<header class="header header-page" id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mobile-no_relative">
+                <div class="header-inner">
+                    <div class="header-inner_left">
+                        <div class="header-logo">
+                            <a href="/">
+                                <img src="./assets/images/logo.png" alt="">
+                            </a>
+                        </div>
+                        <div id="user-mobile" class="header-user d-block d-lg-none">
+                            <a id="call-user_mobile" href="javascript:void(0)">
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <ul class="list-unstyled mb-0">
+                                <li class="name">User name</li>
+                                <li class="wallet">
+                                    <span>
+                                        <i class="fas fa-wallet"></i>
+                                    </span>
+                                    Số dư:&nbsp;
+                                    <b>999.000 <sup>đ</sup></b>
+                                </li>
+                                <li>
+                                    <a href="#">Thông tin tài khoản</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kết nối API</a>
+                                </li>
+                                <li>
+                                    <a href="#">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-hamburger d-block d-lg-none">
+                            <button type="button" class="no-animation" id="call-header_mobile">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="header-inner_middle">
+                        <div class="header-navigation">
+                            <ul class="list-unstyled mb-0" id="hasMenu">
+                                <li>
+                                    <a href="">
+                                        Captcha recognition service
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Work for us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        API
+                                    </a>
+                                    <ul class="list-unstyled mb-0">
+                                        <li>
+                                            <a href="">
+                                                Hướng dẫn sử dụng API
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Hướng dẫn sử dụng
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Hướng dẫn sử dụng
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                Hướng dẫn sử dụng
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Software
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Blog
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-inner_right d-none d-lg-block">
+                        <div class="header-login">
+                            <div class="header-login_item header-login_item__text d-none">
+                                <a href="dang-nhap.html">Đăng nhập</a>
+                            </div>
+                            <div class="header-login_item header-login_item__btn d-none">
+                                <a href="dang-ky.html">Đăng ký</a>
+                            </div>
+                            <div class="header-login_item header-login_item__islogin header-login_item__text">
+                                <a href="#"><span>
+                                    <i class="fas fa-wallet"></i>
+                                </span>
+                                    Số dư:&nbsp;
+                                    <b>
+                                        999.000 <sup>đ</sup>
+                                    </b>
+                                </a>
+                            </div>
+                            <div class="header-login_item header-login_item__islogin header-login_item__btn">
+                                <a href="#">Thông tin tài khoản</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-overlay" id="header-overlay"></div>
+</header>
+
+<div class="main">
+    <div class="section-page section-article">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Trang chủ</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Tin tức</a>
+                            </li>
+                            <li class="breadcrumb-item active"><span>Chi tiết tin tức</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7 col-lg-8">
+                    <div class="article-inner">
+                        <h1 class="article-inner_title">
+                            hCaptcha on Cloudflare-protected websites
+                        </h1>
+                        <div class="article-inner_meta">
+                            <div class="meta-post">
+                                <i class="fas fa-calendar-alt"></i> 10/01/2022
+                            </div>
+                            <div class="meta-view">
+                                <i class="fas fa-user-alt"></i> Lượt xem: 19
+                            </div>
+                        </div>
+                        <div class="article-inner_image">
+                            <img src="https://2captcha.com/articles/en/2021-04-05/media/images/%D1%81loudflare.jpg"
+                                 class="img-fluid w-100 h-auto" alt="">
+                        </div>
+                        <div class="article-inner_content">
+                            <h2>What happened?</h2>
+                            <p>Recently Cloudflare changed the way of processing hCpatcha tokens after solving the
+                                captcha. Now tokens are not sent as plain text inside HTTP request to the back-end as it
+                                was before. Now tokens are encrypted with the javascript callback function before
+                                sending.
+                            </p>
+                            <h2>How does it work now?</h2>
+                            <p>When you bypass the hCaptcha challenge the token is passed to a callback function. The
+                                callback is defined inside obfuscated javascript code loaded from <code class="hljs">/cdn-cgi/challenge-platform/h/b/orchestrate/captcha/v1</code>.
+                            </p>
+                            <p>The callback function uses some additional data defined inside the javascript and applies
+                                some logic to encrypt the token and additional data before submitting it to the back-end
+                                on <code class="hljs">/cdn-cgi/challenge-platform/h/b/flow/ov1/</code>.</p>
+                            <h2>What happened?</h2>
+                            <p>Recently Cloudflare changed the way of processing hCpatcha tokens after solving the
+                                captcha. Now tokens are not sent as plain text inside HTTP request to the back-end as it
+                                was before. Now tokens are encrypted with the javascript callback function before
+                                sending.
+                            </p>
+                            <h2>How does it work now?</h2>
+                            <p>When you bypass the hCaptcha challenge the token is passed to a callback function. The
+                                callback is defined inside obfuscated javascript code loaded from <code class="hljs">/cdn-cgi/challenge-platform/h/b/orchestrate/captcha/v1</code>.
+                            </p>
+                            <p>The callback function uses some additional data defined inside the javascript and applies
+                                some logic to encrypt the token and additional data before submitting it to the back-end
+                                on <code class="hljs">/cdn-cgi/challenge-platform/h/b/flow/ov1/</code>.</p>
+                            <h2>What happened?</h2>
+                            <p>Recently Cloudflare changed the way of processing hCpatcha tokens after solving the
+                                captcha. Now tokens are not sent as plain text inside HTTP request to the back-end as it
+                                was before. Now tokens are encrypted with the javascript callback function before
+                                sending.
+                            </p>
+                            <h2>How does it work now?</h2>
+                            <p>When you bypass the hCaptcha challenge the token is passed to a callback function. The
+                                callback is defined inside obfuscated javascript code loaded from <code class="hljs">/cdn-cgi/challenge-platform/h/b/orchestrate/captcha/v1</code>.
+                            </p>
+                            <p>The callback function uses some additional data defined inside the javascript and applies
+                                some logic to encrypt the token and additional data before submitting it to the back-end
+                                on <code class="hljs">/cdn-cgi/challenge-platform/h/b/flow/ov1/</code>.</p>
+
+                            <h2>What happened?</h2>
+                            <p>Recently Cloudflare changed the way of processing hCpatcha tokens after solving the
+                                captcha. Now tokens are not sent as plain text inside HTTP request to the back-end as it
+                                was before. Now tokens are encrypted with the javascript callback function before
+                                sending.
+                            </p>
+                            <h2>How does it work now?</h2>
+                            <p>When you bypass the hCaptcha challenge the token is passed to a callback function. The
+                                callback is defined inside obfuscated javascript code loaded from <code class="hljs">/cdn-cgi/challenge-platform/h/b/orchestrate/captcha/v1</code>.
+                            </p>
+                            <p>The callback function uses some additional data defined inside the javascript and applies
+                                some logic to encrypt the token and additional data before submitting it to the back-end
+                                on <code class="hljs">/cdn-cgi/challenge-platform/h/b/flow/ov1/</code>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-4 mt-md-0 mt-4">
+                    <div class="article-sidebar">
+                        <div class="section-heading">
+                            <div class="section-heading_title">
+                                <i class="fas fa-grip-horizontal"></i>
+                                Tin tức liên quan
+                            </div>
+                        </div>
+                        <div class="article-sidebar_list">
+                            <div class="sidebar-item">
+                                <div class="sidebar-item_image">
+                                    <a href="">
+                                        <img src="https://2captcha.com/articles/en/2021-04-05/media/images/%D1%81loudflare.jpg"
+                                             class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="sidebar-item_content">
+                                    <div class="sidebar-item_meta">
+                                        <div class="meta-post">
+                                            <i class="fas fa-calendar-alt"></i> 10/01/2022
+                                        </div>
+                                        <div class="meta-view">
+                                            <i class="fas fa-user-alt"></i> Lượt xem: 19
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-item_title">
+                                        <a href="">
+                                            Automatic ReCAPTCHA V3 resolution - a tutorial for developers and customers
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="sidebar-item_image">
+                                    <a href="">
+                                        <img src="https://2captcha.com/articles/en/2021-04-05/media/images/%D1%81loudflare.jpg"
+                                             class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="sidebar-item_content">
+                                    <div class="sidebar-item_meta">
+                                        <div class="meta-post">
+                                            <i class="fas fa-calendar-alt"></i> 10/01/2022
+                                        </div>
+                                        <div class="meta-view">
+                                            <i class="fas fa-user-alt"></i> Lượt xem: 19
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-item_title">
+                                        <a href="">
+                                            Facebook page blocked
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="sidebar-item_image">
+                                    <a href="">
+                                        <img src="https://2captcha.com/articles/en/2021-04-05/media/images/%D1%81loudflare.jpg"
+                                             class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="sidebar-item_content">
+                                    <div class="sidebar-item_meta">
+                                        <div class="meta-post">
+                                            <i class="fas fa-calendar-alt"></i> 10/01/2022
+                                        </div>
+                                        <div class="meta-view">
+                                            <i class="fas fa-user-alt"></i> Lượt xem: 19
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-item_title">
+                                        <a href="">
+                                            Automatic ReCAPTCHA V3 resolution - a tutorial for developers and customers
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="sidebar-item_image">
+                                    <a href="">
+                                        <img src="https://2captcha.com/articles/en/2021-04-05/media/images/%D1%81loudflare.jpg"
+                                             class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="sidebar-item_content">
+                                    <div class="sidebar-item_meta">
+                                        <div class="meta-post">
+                                            <i class="fas fa-calendar-alt"></i> 10/01/2022
+                                        </div>
+                                        <div class="meta-view">
+                                            <i class="fas fa-user-alt"></i> Lượt xem: 19
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-item_title">
+                                        <a href="">
+                                            Facebook page blocked
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="sidebar-item_image">
+                                    <a href="">
+                                        <img src="https://2captcha.com/articles/en/2021-04-05/media/images/%D1%81loudflare.jpg"
+                                             class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="sidebar-item_content">
+                                    <div class="sidebar-item_meta">
+                                        <div class="meta-post">
+                                            <i class="fas fa-calendar-alt"></i> 10/01/2022
+                                        </div>
+                                        <div class="meta-view">
+                                            <i class="fas fa-user-alt"></i> Lượt xem: 19
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-item_title">
+                                        <a href="">
+                                            Automatic ReCAPTCHA V3 resolution - a tutorial for developers and customers
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="sidebar-item_image">
+                                    <a href="">
+                                        <img src="https://2captcha.com/articles/en/2021-04-05/media/images/%D1%81loudflare.jpg"
+                                             class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="sidebar-item_content">
+                                    <div class="sidebar-item_meta">
+                                        <div class="meta-post">
+                                            <i class="fas fa-calendar-alt"></i> 10/01/2022
+                                        </div>
+                                        <div class="meta-view">
+                                            <i class="fas fa-user-alt"></i> Lượt xem: 19
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-item_title">
+                                        <a href="">
+                                            Facebook page blocked
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="sidebar-item_image">
+                                    <a href="">
+                                        <img src="https://2captcha.com/articles/en/2021-04-05/media/images/%D1%81loudflare.jpg"
+                                             class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="sidebar-item_content">
+                                    <div class="sidebar-item_meta">
+                                        <div class="meta-post">
+                                            <i class="fas fa-calendar-alt"></i> 10/01/2022
+                                        </div>
+                                        <div class="meta-view">
+                                            <i class="fas fa-user-alt"></i> Lượt xem: 19
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-item_title">
+                                        <a href="">
+                                            Automatic ReCAPTCHA V3 resolution - a tutorial for developers and customers
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-item">
+                                <div class="sidebar-item_image">
+                                    <a href="">
+                                        <img src="https://2captcha.com/articles/en/2021-04-05/media/images/%D1%81loudflare.jpg"
+                                             class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="sidebar-item_content">
+                                    <div class="sidebar-item_meta">
+                                        <div class="meta-post">
+                                            <i class="fas fa-calendar-alt"></i> 10/01/2022
+                                        </div>
+                                        <div class="meta-view">
+                                            <i class="fas fa-user-alt"></i> Lượt xem: 19
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-item_title">
+                                        <a href="">
+                                            Facebook page blocked
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer-top">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <div class="footer-navigation">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Work for us</a>
+                                    </li>
+                                    <li>
+                                        <a href="">API</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Online statistics</a>
+                                    </li>
+                                    <li>
+                                        <a href="">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            Software
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            Blog
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="footer-dropdown d-flex align-items-center justify-content-lg-end">
+                                <div class="dropdown dropdown-wrap">
+                                    <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownCurrency"
+                                            data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <span class="px-2">Tiền tệ</span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownCurrency"
+                                         style="">
+                                        <a class="dropdown-item" href="#">Dollars</a>
+                                        <a class="dropdown-item" href="#">Nhân dân tệ</a>
+                                        <a class="dropdown-item active" href="#">Vietnam đồng</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown dropdown-wrap ml-3">
+                                    <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownLanguage"
+                                            data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-globe"></i>
+                                        <span class="px-2">Tiếng Việt (vi)</span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguage"
+                                         style="">
+                                        <a class="dropdown-item " href="#">English</a>
+                                        <a class="dropdown-item active " href="#">Tiếng
+                                            Việt
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-bottom_logo">
+                                <a href="">
+                                    <img src="./assets/images/logo-white.png" alt="">
+                                </a>
+                            </div>
+                            <div class="footer-bottom_copyright">
+                                Copying any part of this website without the explicit permission of the website owner is
+                                illegal.
+                                Designed by
+                                <a href="https://nencer.com">nencer.com</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-bottom_image">
+                                <img src="./assets/images/payments.svg" alt="">
+                            </div>
+                            <div class="footer-bottom_contact">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="">
+                                            <i class="fas fa-envelope"></i>
+                                            info@example.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fas fa-phone-alt"></i>
+                                            0909.090.909
+                                        </a>
+                                    </li>
+                                    <li class="address">
+                                        <a href="">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type=" text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/select2/js/select2.min.js"></script>
+<script type="text/javascript" src="./assets/js/app.js"></script>
+</body>
+</html>

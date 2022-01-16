@@ -42,7 +42,7 @@
 <header class="header" id="header">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mobile-no_relative">
                 <div class="header-inner">
                     <div class="header-inner_left">
                         <div class="header-logo">
@@ -50,10 +50,30 @@
                                 <img src="./assets/images/logo.png" alt="">
                             </a>
                         </div>
+                        <div id="user-mobile" class="header-user d-block d-lg-none">
+                            <a id="call-user_mobile" href="javascript:void(0)">
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#">Đăng nhập</a>
+                                </li>
+                                <li>
+                                    <a href="#">Đăng ký</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-hamburger d-block d-lg-none">
+                            <button type="button" class="no-animation" id="call-header_mobile">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
                     </div>
                     <div class="header-inner_middle">
                         <div class="header-navigation">
-                            <ul class="list-unstyled mb-0">
+                            <ul class="list-unstyled mb-0" id="hasMenu">
                                 <li>
                                     <a href="">
                                         Captcha recognition service
@@ -104,7 +124,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="header-inner_right">
+                    <div class="header-inner_right d-none d-lg-block">
                         <div class="header-login">
                             <div class="header-login_item header-login_item__text">
                                 <a href="dang-nhap.html">Đăng nhập</a>
@@ -118,7 +138,7 @@
             </div>
         </div>
     </div>
-    <div class="header-overlay"></div>
+    <div class="header-overlay" id="header-overlay"></div>
 </header>
 
 <div class="main">
@@ -188,7 +208,7 @@
                 </div>
             </div>
             <div class="row row-col-10 justify-content-center">
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="card card-table_price">
                         <div class="card-header">
                             <div class="card-header_content">
@@ -232,7 +252,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="card card-table_price">
                         <div class="card-header">
                             <div class="card-header_content">
@@ -276,7 +296,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="card card-table_price">
                         <div class="card-header">
                             <div class="card-header_content">
@@ -320,7 +340,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
                     <div class="card card-table_price">
                         <div class="card-header">
                             <div class="card-header_content">
@@ -557,7 +577,7 @@
                         </div>
                     </div>
                     <div class="section-service_inner">
-                        <div class="row row-5">
+                        <div class="row row-col-5">
                             <div class="col-lg-2 col-6 col-sm-3">
                                 <div class="service-item">
                                     <a href="">
@@ -1437,7 +1457,7 @@
                         <div class="col-md-6">
                             <div class="footer-bottom_logo">
                                 <a href="">
-                                    <img src="./assets/images/logo.png" alt="">
+                                    <img src="./assets/images/logo-white.png" alt="">
                                 </a>
                             </div>
                             <div class="footer-bottom_copyright">
