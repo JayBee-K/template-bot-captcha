@@ -127,6 +127,21 @@ const viewPass = function () {
         }
     });
 }
+const slideBanner = function () {
+    new Swiper('#slideBanner', {
+        loop: false,
+        simulateTouch: false,
+        speed: 250,
+        navigation: {
+            nextEl: '#slideBanner .slide-button-next',
+            prevEl: '#slideBanner .slide-button-prev',
+        },
+        autoplay: {
+            delay: 10000,
+            disableOnInteraction: false,
+        },
+    });
+}
 
 
 $(function () {
@@ -134,6 +149,7 @@ $(function () {
     headerScroll();
     callUserMobile();
     slideApi();
+    slideBanner();
 
     // Form
     viewPass();
