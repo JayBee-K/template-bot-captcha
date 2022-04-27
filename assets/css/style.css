@@ -402,150 +402,6 @@ body {
     color: var(--dark-color);
 }
 
-.section-captcha {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.section-captcha .captcha-decor_circle {
-    top: -98px;
-    right: calc(50% - 930px);
-    width: 800px;
-    height: 800px;
-    background: var(--secondary-color);
-    position: absolute;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.section-captcha .captcha-main {
-    position: relative;
-    z-index: 2;
-    padding-top: 40px;
-}
-
-.section-captcha .captcha-main .captcha-inner {
-    border-radius: 8px;
-    padding: 30px;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-title {
-    font-size: 1.8em;
-    font-weight: 700;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-title i {
-    color: #16345b;
-    font-size: .6em;
-    opacity: .3;
-    margin-right: 8px;
-    margin-top: -3px;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_image {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_image img {
-    width: auto;
-    height: auto;
-    object-fit: cover;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_list .captcha-list_item {
-    display: flex;
-    align-items: center;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_list .captcha-list_item img {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    margin-right: 15px;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_list .captcha-list_item .captcha-list_text {
-    font-size: 1.1em;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_list .captcha-list_item + .captcha-list_item {
-    margin-top: 15px;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 50px;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_buttons .captcha-btn_outline {
-    width: calc(50% - 7.5px);
-    border-radius: 4px;
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
-    font-size: 1.2em;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    background-color: #fff;
-    text-align: center;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_buttons .captcha-btn {
-    width: calc(50% - 7.5px);
-    border-radius: 4px;
-    border: 2px solid var(--secondary-color);
-    color: var(--white);
-    font-size: 1.2em;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    background-color: var(--secondary-color);
-    text-align: center;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-}
-
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_buttons .captcha-btn_outline:hover,
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_buttons .captcha-btn_outline:active,
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_buttons .captcha-btn:hover,
-.section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_buttons .captcha-btn:active {
-    background-color: #235fa9;
-    color: var(--white);
-}
-
-.section-captcha .captcha-main .captcha-image {
-    text-align: center;
-}
-
 .section-gap {
     padding: 50px 0;
 }
@@ -2277,33 +2133,12 @@ body {
         left: 0;
     }
 
-    .section-captcha {
-        height: auto;
-    }
-
-    .section-captcha .captcha-main .captcha-inner {
-        padding: 15px;
-    }
-
-    .section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_buttons {
-        margin-top: 30px;
-        font-size: 13px;
-    }
-
-    .section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_buttons .captcha-btn_outline,
-    .section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_buttons .captcha-btn {
-        height: 40px;
-    }
-
     .section-heading,
-    .section-captcha .captcha-main .captcha-inner .captcha-title,
-    .section-captcha .captcha-main .captcha-inner .captcha-content .captcha-content_image,
     .section-description .description-inner .description-title {
         margin-bottom: 20px;
     }
 
     .section-heading .section-heading_title,
-    .section-captcha .captcha-main .captcha-inner .captcha-title,
     .section-description .description-inner .description-title {
         font-size: 1.5em;
     }
@@ -2472,7 +2307,7 @@ body {
 
 .section-banner .swiper-slide {
     padding: 100px 0 50px 0;
-    min-height: 450px;
+    min-height: 630px;
     display: flex;
     flex-direction: column;
     justify-content: center;
