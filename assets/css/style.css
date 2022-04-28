@@ -551,12 +551,6 @@ body {
     background-color: #f6f6f6;
 }
 
-.section-document .document-inner {
-    padding: 45px;
-    border-radius: 8px;
-    background: var(--white);
-    box-shadow: 0 1px 8px 2px rgb(0 0 0 / 15%);
-}
 
 .section-document .document-inner .document-tabs .document-tabs_list .nav-tabs {
     margin-bottom: 0;
